@@ -1,0 +1,202 @@
+{
+	"info": {
+		"_postman_id": "b6b60fac-73ac-4ea5-9956-69303231d684",
+		"name": "Petsmart",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3859277",
+		"_collection_link": "https://galactic-star-393477.postman.co/workspace/saiprasad~a36226bb-da18-4053-83eb-11dcb0b1f8ed/collection/3859277-b6b60fac-73ac-4ea5-9956-69303231d684?action=share&source=collection_link&creator=3859277"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/saveAppointment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"serviceId\": \"12\",\n    \"serviceName\": \"Suds and Scissors Pet Spa\",\n    \"username\": \"sai\",\n    \"email\": \"sai@gmail.com\",\n    \"date\": \"2023-10-22\",\n    \"timeSlot\": \"10:27\",\n    \"message\": \"some message\",\n    \"userId\": \"653f5413a56e765bb720d7e3\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/saveAppointment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"saveAppointment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/getAppointments/653f5413a56e765bb720d7e3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/getAppointments/653f5413a56e765bb720d7e3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getAppointments",
+						"653f5413a56e765bb720d7e3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/getOrders/653f5413a56e765bb720d7e3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/getOrders/653f5413a56e765bb720d7e3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getOrders",
+						"653f5413a56e765bb720d7e3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/saveOrder",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"orderItem\": [\n        {\n            \"name\": \"Interactive Squeaky Ball\",\n            \"count\": \"1\",\n            \"price\": \"10\"\n        },\n        {\n            \"name\": \"Durable Chew Bone\",\n            \"count\": \"2\",\n            \"price\": \"15\"\n        }\n    ],\n    \"delivery\":{\n        \"deliveryType\":\"1\",\n        \"deliveryDate\":\"20-10-2023\",\n        \"address\":\"some addresss\"\n    },\n    \"userId\": \"653f5413a56e765bb720d7e3\",\n    \"cardNumber\": \"s123456789\",\n    \"nameOnTheCard\": \"saiprasad card\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/saveOrder",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"saveOrder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/loginUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"annaldas.sai111@gmail.com\",\n    \"password\": \"test\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/loginUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"loginUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/getUser/653f5464a56e765bb720d7e4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/getUser/653f5464a56e765bb720d7e4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getUser",
+						"653f5464a56e765bb720d7e4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/saveUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstname\": \"robert\",\n    \"lastname\": \"s\",\n    \"email\": \"robert.s@gmail.com\",\n    \"password\": \"test\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/saveUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"saveUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/getAllUsers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/getAllUsers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getAllUsers"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
